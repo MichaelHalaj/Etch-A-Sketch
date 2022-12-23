@@ -5,9 +5,7 @@ container = document.querySelector('.container');
 grid = document.createElement('div');
 grid.classList.add('grid');
 container.appendChild(grid);
-dimensions = 10;
-
-
+dimensions = 64;
 
 
 size = maxGridSize / dimensions;
