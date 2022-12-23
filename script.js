@@ -23,7 +23,9 @@ function drawGrid(dimensions){
                     grid-template-rows: repeat(${dimensions}, ${sizeString}); 
                     grid-template-columns: repeat(${dimensions},${sizeString}); 
                     justify-items: stretch; 
-                    align-items: stretch;`
+                    align-items: stretch;
+                    border: 8px solid #DDD;
+                    border-radius: 2%;`
                     );
     for(let i = 0; i < dimensions * dimensions; i++){
         const div = document.createElement('div');
