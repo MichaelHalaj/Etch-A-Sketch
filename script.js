@@ -13,6 +13,7 @@ function dimIsValid(dimensions){
 
 function drawGrid(dimensions){    
     const grid = document.createElement('div');
+    //const grid = document.querySelector('.grid');
     grid.classList.add('grid');
     container.appendChild(grid);
 
