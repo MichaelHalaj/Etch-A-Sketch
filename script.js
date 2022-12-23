@@ -1,17 +1,22 @@
 const maxGridSize = 960;
-maxGridSizeString = `${maxGridSize}px`;
+const maxGridSizeString = `${maxGridSize}px`;
 
 const gridMinLimit = 4;
 const gridMaxLimit = 100;
-container = document.querySelector('.container');
-button = document.querySelector('.input');
-grid = document.createElement('div');
-grid.classList.add('grid');
-container.appendChild(grid);
 
+const button = document.querySelector('.input');
+const container = document.querySelector('.container');
+
+function dimIsValid(dimensions){
+    return dimensions >= gridMinLimit && dimensions <= gridMaxLimit; 
+}
 
 function drawGrid(dimensions){
-    size = maxGridSize / dimensions;
+    
+    const grid = document.createElement('div');
+    grid.classList.add('grid');
+    container.appendChild(grid);
+    const size = maxGridSize / dimensions;
     sizeString = `${size}px`;
     grid.setAttribute('style', `display: grid; 
                     grid-template-rows: repeat(${dimensions}, ${sizeString}); 
@@ -19,7 +24,7 @@ function drawGrid(dimensions){
                     justify-items: stretch; 
                     align-items: stretch;`
                     );
-    for(i = 0; i < dimensions * dimensions; i++){
+    for(let i = 0; i < dimensions * dimensions; i++){
         const div = document.createElement('div');
         div.setAttribute('style', 'background: #EEE;');
         div.setAttribute('id', i);
@@ -31,13 +36,16 @@ function drawGrid(dimensions){
         });
     }
 }
-function dimIsValid(dimensions){
-    return dimensions >= gridMinLimit && dimensions <= gridMaxLimit; 
+
+function clearGrid(){
+    let grid = document.querySelector('.grid');
+    container.removeChild(grid);
 }
 button.addEventListener('click', (event)=>{
     dimensions = prompt("Enter size of grid (eg. 16, 32...):");
     if(dimIsValid(dimensions)){
         drawGrid(dimensions);
+        clearGrid();
     }else{
         alert(`Size is invalid! Size must be integer between ${gridMinLimit} and ${gridMaxLimit}.`)
     }
