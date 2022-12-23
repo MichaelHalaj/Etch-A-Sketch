@@ -17,9 +17,12 @@ body{
 .input:hover{
     background-color: rgb(94, 132, 145);
 }
+h1{
+    text-align: center;
+}
 .input{
     align-self: center;
-    
+    outline: none;
     font-size: large;
     padding: 8px 16px ;
     background-color: lightblue;
