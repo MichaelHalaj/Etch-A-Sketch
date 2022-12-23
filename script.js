@@ -12,11 +12,12 @@ function dimIsValid(dimensions){
 }
 
 function drawGrid(dimensions){    
-    grid = document.createElement('div');
+    const grid = document.createElement('div');
     grid.classList.add('grid');
     container.appendChild(grid);
-    size = maxGridSize / dimensions;
-    sizeString = `${size}px`;
+    
+    const size = maxGridSize / dimensions;
+    const sizeString = `${size}px`;
     grid.setAttribute('style', `display: grid; 
                     grid-template-rows: repeat(${dimensions}, ${sizeString}); 
                     grid-template-columns: repeat(${dimensions},${sizeString}); 
@@ -40,12 +41,11 @@ function clearGrid(){
     let grid = document.querySelector('.grid');
     container.removeChild(grid);
 }
-button.addEventListener('click', (event)=>{
+button.addEventListener('click', function(){
     dimensions = prompt("Enter size of grid (eg. 16, 32...):");
     if(dimIsValid(dimensions)){
         drawGrid(dimensions);
     }else{
         alert(`Size is invalid! Size must be integer between ${gridMinLimit} and ${gridMaxLimit}.`)
-    }
-    
-})
+    }   
+});
