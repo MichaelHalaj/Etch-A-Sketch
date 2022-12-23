@@ -21,7 +21,7 @@ grid.setAttribute('style', `display: grid;
                 padding: ${maxGridSize} ${maxGridSize}`)
 for(i = 0; i < dimensions * dimensions; i++){
     const div = document.createElement('div');
-    div.setAttribute('style', 'margin: auto; background-color: blue;');
+    div.setAttribute('style', 'background: gray;');
     div.setAttribute('id', i);
     //div.textContent = 'Hello';
     div.classList.add('grid-item');
