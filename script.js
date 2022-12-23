@@ -15,7 +15,7 @@ function drawGrid(dimensions){
     const grid = document.createElement('div');
     grid.classList.add('grid');
     container.appendChild(grid);
-    
+
     const size = maxGridSize / dimensions;
     const sizeString = `${size}px`;
     grid.setAttribute('style', `display: grid; 
@@ -39,10 +39,14 @@ function drawGrid(dimensions){
 
 function clearGrid(){
     let grid = document.querySelector('.grid');
-    container.removeChild(grid);
+    if(grid){
+        container.removeChild(grid);
+    }
+    
 }
 button.addEventListener('click', function(){
     dimensions = prompt("Enter size of grid (eg. 16, 32...):");
+    clearGrid();
     if(dimIsValid(dimensions)){
         drawGrid(dimensions);
     }else{
