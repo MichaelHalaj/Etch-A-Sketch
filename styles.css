@@ -1,3 +1,8 @@
+body{
+    font-family: roboto, sans-serif;
+    background-color: rgb(7, 177, 177);
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -7,13 +12,18 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+}
+.input:hover{
+    background-color: rgb(94, 132, 145);
 }
 .input{
     align-self: center;
-    padding: 8px 16px !important;
-    background-color: lightblue !important;
-    border-width: 0 !important;
+    
+    font-size: large;
+    padding: 8px 16px ;
+    background-color: lightblue;
+    border: none;
     margin: 0;
     border-radius: 8%;
 }
