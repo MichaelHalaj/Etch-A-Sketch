@@ -42,6 +42,7 @@ function clearGrid(){
     if(grid){
         container.removeChild(grid);
     }
+    return;
     
 }
 button.addEventListener('click', function(){
