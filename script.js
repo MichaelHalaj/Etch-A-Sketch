@@ -1,4 +1,4 @@
-const maxGridSize = 480;
+const maxGridSize = 500;
 const maxGridSizeString = `${maxGridSize}px`;
 
 const gridMinLimit = 4;
@@ -24,10 +24,10 @@ function drawGrid(dimensions){
                     grid-template-columns: repeat(${dimensions},${sizeString}); 
                     justify-items: stretch; 
                     align-items: stretch;
-                    background-color: #dc2626;
-                    border: 12px solid #dc2626;
+                    background-color: #dc2626b5;
+                    border: 12px solid #dc26267e;
                     border-radius: 2%;
-                    box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.3);`
+                    box-shadow: 0 0 12px rgba(50, 50, 50, 0.7);`
                     );
     for(let i = 0; i < dimensions * dimensions; i++){
         const div = document.createElement('div');

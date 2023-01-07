@@ -1,8 +1,14 @@
 *{
     font-family: 'Oswald', sans-serif;
 }
-body{
-    background-color: rgb(7, 177, 177);
+body, html{
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(180deg, #fbbf24, #fb923c);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container{
@@ -17,18 +23,26 @@ body{
     gap: 10px;
 }
 .input:hover{
-    background-color: rgb(94, 132, 145);
+    background-color: #d2d6d9;;
 }
 h1{
-    text-align: center;
+    align-self: center;
+    font-size: 96px;
+    margin: 0;
+    color: #f1f5f9;
+    text-shadow: rgba(50, 50, 50, 0.5) 1px 0 10px;
 }
 .input{
     align-self: center;
     outline: none;
     font-size: large;
     padding: 8px 16px ;
-    background-color: lightblue;
+    background-color: #f1f5f9;
     border: none;
     margin: 0;
-    border-radius: 8%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 8px;
+    margin-bottom: 36px;
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.5);
 }
