@@ -24,12 +24,14 @@ function drawGrid(dimensions){
                     grid-template-columns: repeat(${dimensions},${sizeString}); 
                     justify-items: stretch; 
                     align-items: stretch;
-                    border: 8px solid #DDD;
-                    border-radius: 2%;`
+                    background-color: #dc2626;
+                    border: 12px solid #dc2626;
+                    border-radius: 2%;
+                    box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.3);`
                     );
     for(let i = 0; i < dimensions * dimensions; i++){
         const div = document.createElement('div');
-        div.setAttribute('style', 'background: #EEE;');
+        div.setAttribute('style', 'background: #e5e5e5; border: 1px dotted #a3a3a3');
         div.setAttribute('id', i);
         div.classList.add('grid-item');
         grid.appendChild(div);
