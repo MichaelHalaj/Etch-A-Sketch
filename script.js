@@ -1,4 +1,4 @@
-const maxGridSize = 960;
+const maxGridSize = 480;
 const maxGridSizeString = `${maxGridSize}px`;
 
 const gridMinLimit = 4;
